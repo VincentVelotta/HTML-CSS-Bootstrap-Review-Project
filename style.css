@@ -1,0 +1,410 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f6f7;
+    color: #222;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 9%;
+    background: #f5f6f7;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 35px;
+    height: auto;
+}
+
+.nav-links {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+    color: #18c5c8;
+}
+
+
+
+.image-container {
+    position: relative;
+    width: 100%;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    color: black;
+    top: 30%;
+left: 75%;
+}
+
+.button {
+    display: inline-block;
+    background: #18c5c8;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #12aeb1;
+}
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 0 5%;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 9px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 7%;
+    }
+
+    .hero-image,
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 30px;
+    }
+}
+
+.sign {
+    padding: 50px 8%;
+    width: 100%;
+    padding-left: 28%;
+
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+}
+
+.grid-container div {
+    padding: 60px 8%;
+    border: none;
+    background-color: #f5f6f7;
+    text-align: left;
+}
+
+  progress {
+    width: 80%;
+    height: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: none;
+}
+
+progress::-webkit-progress-bar {
+    background-color: #f1f1f1;
+}
+
+progress::-webkit-progress-value {
+    background-color: #18c5c8;
+}
+
+progress::-moz-progress-bar {
+    background-color: #18c5c8;
+}
+
+progress::-ms-fill {
+    background-color: #18c5c8;
+}
+
+.Information {
+    padding: 50px 8%;
+    background-color: #10c9c3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    color:white;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 0;
+}
+
+.portfolio div {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.portfolio img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.portfolio {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 0;
+}
+
+.portfolio-item {
+    position: relative;
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+.portfolio-item > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.55);
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.5);
+}
+
+
+.overlay img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+
+    filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.6));
+
+    transform: scale(0.7);
+    transition: transform 0.3s ease;
+}
+
+
+.portfolio-item:hover .overlay {
+    opacity: 1;
+}
+
+.portfolio-item:hover > img {
+    transform: scale(1.05);
+}
+
+.portfolio-item:hover .overlay img {
+    transform: scale(1);
+}
+
+.footer {
+    padding: 50px 8%;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-columns: repeat(4, 1fr);
+    color:white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  align-items: center;
+}
+
+.testimonial {
+    padding: 50px 8%;
+    background-color: #10c9c3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f1f1f1;
+}
+
+.grid-logos {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+    }
+
+.contact-us {
+    padding: 50px 8%;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #333;
+}
+
+h4{
+    font-size: xx-large;
+    font-family: montserrat, sans-serif;
+}
+
+form {
+    width: 670px;
+    margin: auto;
+}
+
+.row {
+    display: flex;
+    gap: 30px;
+}
+
+input,
+textarea {
+    width: 100%;
+    border: none;
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    font-size: 16px;
+}
+
+input {
+    height: 20px;
+}
+
+textarea {
+    height: 140px;
+    resize: none;
+}
+
+button {
+    background: #16c1c3;
+    color: white;
+    border: none;
+    padding: 18px 35px;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+ footer {
+      padding: 85px 9%;
+      min-height: 300px;
+      display: flex;
+      justify-content: space-between;
+      background: #111;
+    }
+
+    .company {
+      color: #eee;
+    }
+
+    .company h3 {
+      margin: 0 0 25px;
+      font-size: 20px;
+      font-weight: normal;
+    }
+
+    .company p {
+      margin: 7px 0;
+      font-size: 14px;
+    }
+
+    .help {
+      font-size: 14px;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .links {
+      display: flex;
+      gap: 70px;
+    }
+
+    .links div {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .links a {
+      color: #aaa;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .links a:hover {
+      color: white;
+    }
+
+    h3 {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    #contact {
+        text-align: center;
+        background-color: #10c9c3;
+    }
+
+   
